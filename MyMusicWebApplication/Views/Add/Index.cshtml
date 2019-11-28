@@ -1,0 +1,99 @@
+﻿@model MusicAlbum
+
+    <p><h2>Let`s add a new music albums</h2></p>
+    @using (Html.BeginForm("SaveMusicAlbum", "Add", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label asp-for="MusicAlbumId" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="MusicAlbumId" class="form-control"/>
+                <span asp-validation-for="MusicAlbumId" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Name" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="Name" class="form-control"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ShortDescription" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="ShortDescription" class="form-control"/>
+                <span asp-validation-for="ShortDescription" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="LongDescription" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="LongDescription" class="form-control"/>
+                <span asp-validation-for="LongDescription" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Price" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="Price" class="form-control"/>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ImageUrl" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="ImageUrl" class="form-control"/>
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ImageThumbnailUrl" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="ImageThumbnailUrl" class="form-control"/>
+                <span asp-validation-for="ImageThumbnailUrl" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="IsMusicAlbumOfTheWeek" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="IsMusicAlbumOfTheWeek" class="form-control"/>
+                <span asp-validation-for="IsMusicAlbumOfTheWeek" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="InStock" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="InStock" class="form-control"/>
+                <span asp-validation-for="InStock" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Category.CategoryId" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <select  asp-for="Category.CategoryId" class="form-control">
+                        <option selected>Select...</option>
+                        <option value="1">Electronica</option>
+                        <option value="2">Jazz</option>
+                        <option value="3">Rock</option>
+                        <option value="4">Soul-Funk-Disco</option>
+                    </select>
+                </div>
+                <span asp-validation-for="Category.CategoryId" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-5" align="center">
+                <input type="submit" class="btn btn-primary" value="Add music album"/>
+            </div>
+        </div>
+    }

@@ -1,0 +1,15 @@
+﻿@model HomeViewModel
+
+<partial name="_Carousel" />
+
+<h2>Music Albums of the week</h2>
+<h4>Our weekly selection - just for you!</h4>
+
+<div class="row">
+
+    @foreach (var musicAlbum in Model.MusicAlbumsOfTheWeek)
+    {
+        <partial name="_MusicAlbumCard" model="musicAlbum" />
+    }
+
+</div>
